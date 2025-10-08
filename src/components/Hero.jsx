@@ -42,6 +42,11 @@ const Description = styled.p`
   max-width: 600px;
 `
 
+const ButtonContainer = styled.div`
+  display: flex;
+  gap: 1rem;
+`
+
 const Button = styled.a`
   display: inline-block;
   padding: 1rem 2rem;
@@ -57,6 +62,14 @@ const Button = styled.a`
   }
 `
 
+const RedButton = styled(Button)`
+  background: #dc3545;
+
+  &:hover {
+    background: #c82333;
+  }
+`
+
 const Hero = () => {
   return (
     <HeroSection>
@@ -67,7 +80,10 @@ const Hero = () => {
           I specialize in creating robust and scalable applications using React, Node.js, 
           and modern web technologies. Let's build something amazing together.
         </Description>
-        <Button href="#contact">Get in Touch</Button>
+        <ButtonContainer>
+          <Button href="#contact">Get in Touch</Button>
+          <RedButton href="#projects">View Projects</RedButton>
+        </ButtonContainer>
       </Content>
     </HeroSection>
   )
